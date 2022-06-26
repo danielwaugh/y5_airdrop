@@ -9,6 +9,7 @@ EXCLUDED_WALLETS = [
     "0x000000000000000000000000000000000000dead".upper()
 ]
 TOTAL_AIRDROP = 100000000000000
+TAX = 0.20
 
 def main(wallet_address, include_excluded_wallets):
     with open("wallets.json") as file:
@@ -29,7 +30,7 @@ def main(wallet_address, include_excluded_wallets):
         print("The address provided is not in the airdrop list")
     else:
         percentage_of_total = wallet_total / running_total
-        total_airdrop_for_wallet = percentage_of_total * TOTAL_AIRDROP
+        total_airdrop_for_wallet = percentage_of_total * TOTAL_AIRDROP * (1 - TAX)
         percent_increase = total_airdrop_for_wallet / wallet_total
         print("Total Airdrop Amount: " + "{:,}".format(round(total_airdrop_for_wallet, 2)) + " Y5")
         print("Percent Increase in Holdings: " + str(round(percent_increase * 100, 2)) + "%")
