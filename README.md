@@ -19,6 +19,6 @@ python3 main.py --address <bsc_public_address> --include_excluded_wallets
 ## Sample Output
 
 ```
-Total Airdrop Amount: 22,285,463,367.12 Y5
-Percent Increase in Holdings: 15.01%
+Total Airdrop Amount: 28,724,063,048.87 Y5
+Percent Increase in Holdings: 19.35%
 ```
